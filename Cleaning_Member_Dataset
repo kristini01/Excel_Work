@@ -1,0 +1,22 @@
+##Upon opening the file, I immediately *copy the table* into another workbook to work with. I then **adjust the column widths** to have a better look at the data.
+
+##Next, I begin by checking the columns for errors. Upon examining the id column, it appears that there should be a 4 digit id number. I go through and look to make sure
+##this is consistent. By **using the LEN function** and looking at the **filter** options, I find out that one of the id #'s is 3 digits instead of 4. This would be when 
+I would investigate this instance before making any changes. For purposes of this activity, I simply added a zero to the end.
+
+##The next column was names and I wanted to check for *duplicates*. I did this by using the **Remove Duplicates** function and there were in fact 2 duplicate entries.
+
+##To check the state, zipcode and country columns, I repeat the **LEN** process. When checking the state colums, I find 2 entries that have 3 characters instead of 2. 
+##I **filter** to fix these and notice that they appear normal. This is likely a case of extra spaces. I use the **TRIM** function to try and remove the spaces and the 
+##state column is now correct. 
+
+##Moving on to the zipcode column, using the **LEN** function again, I see that some of the zipcodes are not 5 digits. This is easily 
+##remedied by checking those with missing numbers with the city. Turns out, these had leading zeros that were being removed by the format of the cells. After changing the
+##format to text, this was fixed.
+
+##I repeated the process on the country column and realized that there were a few entries that had 3 digit country abbreviations instead of 2. I used the **Find and**
+##**Replace** function to replace "USA" with "US."
+
+##Althought this excel file was small, its important to note that I would also use **conditional formatting** to highlight cells with blanks. This would allow me to 
+##either remove the row or find the missing information, if necessary.
+
